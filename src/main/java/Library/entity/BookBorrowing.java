@@ -1,4 +1,4 @@
-package Library.Entity;
+package Library.entity;
 
 import javax.persistence.*;
 import java.time.Instant;

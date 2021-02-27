@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.UUID;
 
-public class BookRepository implements AbstractRepository<Book,UUID> {
+public class BookRepository extends AbstractRepository<Book,UUID> {
     public BookRepository(EntityManager entityManager) {
         super(entityManager, Book.class);
     }
