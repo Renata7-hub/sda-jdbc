@@ -1,5 +1,6 @@
 package Library.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -9,12 +10,18 @@ import java.util.UUID;
 @Entity
 @Table(name = "authors")
 public class Author {
-        private UUID uuid;
-        private String name;
-        private String surname;
+    private UUID uuid;
 
-        @OneToMany
-        private Book book;
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private String surname;
+
+    @OneToMany
+    private Book book;
+
+
 
     public UUID getUuid() {
         return uuid;

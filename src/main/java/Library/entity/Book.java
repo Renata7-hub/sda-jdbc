@@ -1,12 +1,11 @@
 package Library.entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
-import java.util.stream.Collectors;
-
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.*;
 
 @Entity
 @Table(name = "books")
@@ -15,13 +14,40 @@ public class Book {
     private UUID uuid;
     @ManyToOne
     private Author author;
+
+    @Column(nullable = false)
     private String title;
+
     private String genre;
-    private String language;
-    private Date releaseDate;
-    private String publishingHouse;
-    private Integer numberOfPages;
-    private String format;
+
+    @Column(nullable = false)
+    private Instant releaseDate;
+
+  //  private String language;
+    //  private String publishingHouse;
+  //  private Integer numberOfPages;
+ //   private String format;
+
+
+    private static final DateTimeFormatter FORMATTER =
+            DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)
+                    .withLocale(Locale.forLanguageTag("LT"))
+                    .withZone(ZoneId.systemDefault());
+
+    public Book(Author author, String title, String genre, Instant releaseDate) {
+        this.author = author;
+        this.title = title;
+        this.genre = genre;
+        this.releaseDate = releaseDate;
+    }
+
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
+    }
 
     public Author getAuthor() {
         return author;
@@ -47,44 +73,12 @@ public class Book {
         this.genre = genre;
     }
 
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
-    public Date getReleaseDate() {
+    public Instant getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(Instant releaseDate) {
         this.releaseDate = releaseDate;
-    }
-
-    public String getPublishingHouse() {
-        return publishingHouse;
-    }
-
-    public void setPublishingHouse(String publishingHouse) {
-        this.publishingHouse = publishingHouse;
-    }
-
-    public Integer getNumberOfPages() {
-        return numberOfPages;
-    }
-
-    public void setNumberOfPages(Integer numberOfPages) {
-        this.numberOfPages = numberOfPages;
-    }
-
-    public String getFormat() {
-        return format;
-    }
-
-    public void setFormat(String format) {
-        this.format = format;
     }
 
     @Override
@@ -93,11 +87,8 @@ public class Book {
                "author=" + author +
                ", title='" + title + '\'' +
                ", genre='" + genre + '\'' +
-               ", language='" + language + '\'' +
-               ", releaseDate=" + releaseDate +
-               ", publishingHouse='" + publishingHouse + '\'' +
-               ", numberOfPages=" + numberOfPages +
-               ", format='" + format + '\'' +
+               ", releaseDate=" + FORMATTER.format(releaseDate)  +
                '}';
     }
 }
+
