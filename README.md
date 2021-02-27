@@ -23,32 +23,32 @@ dependency injection framework, such as Guice
 JavaFX based frontend
 
 ## Functionalities
-User Interface
+### User Interface
 Within the console/graphic view, the user should be able to select one of the following options:
 
 adding specific locations to the database
 displaying currently added locations
 downloading weather values
-Adding a location
+
+### Adding a location
 The user should be able to add a location to the database by entering the following values:
+-id
+-longitude and latitude
+-region
+-country name
 
-id
-longitude and latitude
-region
-country name
 Additionally, as part of the task, the user should ensure appropriate validation:
-
-id - optional: UUID format
-longitude and latitude according to geographical values ​​(latitude: -90 -> S, 90 -> N, longitude: -180 -> W, 180 -> E)
-city name - cannot be empty
-region - optional: may be null
-Country name - cannot be empty
+-id - optional: UUID format
+-longitude and latitude according to geographical values ​​(latitude: -90 -> S, 90 -> N, longitude: -180 -> W, 180 -> E)
+-city name - cannot be empty
+-region - optional: may be null
+-Country name - cannot be empty
 If incorrect data are entered, the user should be notified via an appropriate message.
 
-Display of available locations
+### Display of available locations
 By selecting the menu option, the user should be able to see all locations entered into the database.
 
-Downloading weather data
+### Downloading weather data
 Downloading weather data from external services
 Under this option, the user should be able to download data from e.g. the following systems:
 
@@ -58,10 +58,10 @@ https://weatherstack.com/documentation
 Supported parameters
 The user should be able to retrieve the following values:
 
-temperature
-pressure
-humidity
-wind direction and speed
+-temperature
+-pressure
+-humidity
+-wind direction and speed
 Values ​​taken from external websites should be averaged and saved additionally to the database before being returned to the user.
 
 Available download configurations
