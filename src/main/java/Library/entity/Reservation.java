@@ -1,7 +1,6 @@
-package Library.Entity;
+package Library.entity;
 
 import javax.persistence.*;
-import java.time.Duration;
 import java.time.Instant;
 import java.util.UUID;
 
