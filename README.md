@@ -22,7 +22,7 @@ JSON data serialization/deserialization tool, eg Gson, Jackson
 dependency injection framework, such as Guice
 JavaFX based frontend
 
-##Functionalities
+## Functionalities
 User Interface
 Within the console/graphic view, the user should be able to select one of the following options:
 
