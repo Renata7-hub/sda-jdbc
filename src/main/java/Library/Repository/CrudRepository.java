@@ -3,6 +3,7 @@ package Library.Repository;
 import java.util.List;
 
 public interface CrudRepository<T, ID> {
+
     T find(ID id);
 
     List<T> findAll();
