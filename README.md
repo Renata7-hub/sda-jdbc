@@ -88,7 +88,7 @@ The user should be able to save the currently collected data to a file in any fo
 
 ## Unit tests
 The implemented functionalities should be covered with unit tests in accordance with commonly used methodologies and practices.
-##Additional requirements
+## Additional requirements
 The program should meet the following criteria:
 
 functionality
