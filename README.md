@@ -9,7 +9,7 @@ Downloading weather data from relevant web services (or files on your local disc
 Downloaded data should be saved to the database
 The application should use the city date and location to retrieve average values
 Average results should be saved in the database
-Technologies
+## Technologies
 Console application
 JDBC or Hibernate
 Domain logic divided into layers, eg DAO, Service
@@ -21,7 +21,8 @@ Application presentation layer based on a pattern, eg MVC/MVP
 JSON data serialization/deserialization tool, eg Gson, Jackson
 dependency injection framework, such as Guice
 JavaFX based frontend
-Functionalities
+
+##Functionalities
 User Interface
 Within the console/graphic view, the user should be able to select one of the following options:
 
@@ -72,7 +73,7 @@ The request may indicate the date on which the weather is to be checked. If the 
 LOCATION
 The request may indicate the location for which the values ​​should be returned. The location should be able to be communicated as city name or a geographic coordinate. Before using it, the location should be saved in the database.
 
-Optional functionalities
+##Optional functionalities
 Edit location
 As part of the new menu option, the user should be able to edit the currently added locations. Validation should also be included in the edit.
 
@@ -85,10 +86,9 @@ The user should be able to display statistical data on selected weather values �
 Data write/read
 The user should be able to save the currently collected data to a file in any format, and then restore them by saving directly to the database.
 
-Unit tests
+## Unit tests
 The implemented functionalities should be covered with unit tests in accordance with commonly used methodologies and practices.
-
-Additional requirements
+##Additional requirements
 The program should meet the following criteria:
 
 functionality
