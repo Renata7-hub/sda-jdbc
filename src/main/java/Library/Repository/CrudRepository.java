@@ -4,13 +4,11 @@ import java.util.List;
 
 public interface CrudRepository<T, ID> {
 
-//    void create(T entity); // CREATE
+    T find(ID id);
 
-        T find(ID id);         // READ
+    List<T> findAll();
 
-        List<T> findAll();
+    void save(T entity);
 
-        void save(T entity);   // UPDATE
-
-        void delete(T entity); // DELETE
+    void delete(T entity);
 }

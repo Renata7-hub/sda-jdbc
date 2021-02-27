@@ -1,11 +1,11 @@
-package Library.Repository;
+package Library.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
 public abstract class AbstractRepository<T, ID> implements CrudRepository<T, ID> {
 
-  protected final EntityManager entityManager;
+    protected final EntityManager entityManager;
     private final Class<? extends T> entityClass;
 
     public AbstractRepository(EntityManager entityManager, Class<? extends T> entityClass) {
@@ -36,4 +36,3 @@ public abstract class AbstractRepository<T, ID> implements CrudRepository<T, ID>
         entityManager.remove(entity);
     }
 }
-
