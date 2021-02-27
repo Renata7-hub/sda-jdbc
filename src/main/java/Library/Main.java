@@ -5,3 +5,15 @@ public class Main {
         System.out.println("Hello World!");
     }
 }
+
+
+/*
+
+    - DB
+    - BACK
+        - Entity
+        - Bendravimas su DB (DAO)
+        - Service layer
+        - Presentation layer <- consoles valdymas
+
+ */
