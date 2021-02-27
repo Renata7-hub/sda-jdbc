@@ -73,7 +73,7 @@ The request may indicate the date on which the weather is to be checked. If the 
 LOCATION
 The request may indicate the location for which the values ​​should be returned. The location should be able to be communicated as city name or a geographic coordinate. Before using it, the location should be saved in the database.
 
-##Optional functionalities
+## Optional functionalities
 Edit location
 As part of the new menu option, the user should be able to edit the currently added locations. Validation should also be included in the edit.
 
