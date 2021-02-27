@@ -8,3 +8,14 @@ public class Main {
     }
 }
 
+/*
+
+    - DB
+    - BACK
+        - Entity
+        - Bendravimas su DB (DAO)
+        - Service layer
+        - Presentation layer <- consoles valdymas
+
+ */
+
