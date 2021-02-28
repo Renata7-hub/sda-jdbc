@@ -15,7 +15,7 @@ public class Book {
     @GeneratedValue
     private UUID id;
 
-    @OneToOne
+    @ManyToOne
     private Author author;
 
     @Column(nullable = false)
